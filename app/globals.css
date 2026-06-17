@@ -43,7 +43,7 @@ p, li, blockquote {
 
 /* Prose container for better readability over particles */
 .prose {
-  max-width: 65ch;
+  /*max-width: 65ch;*/
   padding: 2rem;
   background: var(--overlay-bg);
   backdrop-filter: blur(6px);
