@@ -2,11 +2,11 @@
 
 :root {
   --background: #0b0d17;
-  --foreground: #fafafa; /* increased contrast */
+  --foreground: #ffffff; /* pure white for max contrast */
   --primary: #6366f1;
   --accent: #06b6d4;
   --muted: #374151;
-  --overlay-bg: rgba(0, 0, 0, 0.4); /* semi‑dark overlay for text */
+  --overlay-bg: rgba(0, 0, 0, 0.55); /* semi‑dark overlay for text */
 }
 
 @theme inline {
@@ -22,7 +22,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0b0d17;
-    --foreground: #fafafa;
+    --foreground: #ffffff;
   }
 }
 
@@ -35,10 +35,10 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
-  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
 }
 p, li, blockquote {
-  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
 }
 
 /* Prose container for better readability over particles */
@@ -46,9 +46,9 @@ p, li, blockquote {
   max-width: 65ch;
   padding: 2rem;
   background: var(--overlay-bg);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
 /* Ensure code blocks remain readable */
