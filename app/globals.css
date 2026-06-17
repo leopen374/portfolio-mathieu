@@ -2,10 +2,11 @@
 
 :root {
   --background: #0b0d17;
-  --foreground: #e5e7eb;
+  --foreground: #fafafa; /* increased contrast */
   --primary: #6366f1;
   --accent: #06b6d4;
   --muted: #374151;
+  --overlay-bg: rgba(0, 0, 0, 0.4); /* semi‑dark overlay for text */
 }
 
 @theme inline {
@@ -21,12 +22,39 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0b0d17;
-    --foreground: #e5e7eb;
+    --foreground: #fafafa;
   }
 }
 
+/* Global text improvements */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+p, li, blockquote {
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+/* Prose container for better readability over particles */
+.prose {
+  max-width: 65ch;
+  padding: 2rem;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+/* Ensure code blocks remain readable */
+pre, code {
+  background: rgba(0,0,0,0.6) !important;
+  color: #ffcc00 !important;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
 }

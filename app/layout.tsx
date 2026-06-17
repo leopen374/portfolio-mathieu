@@ -30,7 +30,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <BackgroundParticles />
-        <div className="parallax-container relative overflow-auto flex- min-h-[100vh]">{children}</div>
+        <div className="prose flex-1 w-full max-w-4xl mx-auto">{children}</div>
       </body>
     </html>
   );
